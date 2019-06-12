@@ -9,7 +9,9 @@ const forecast = (latitude, longitude, callback) => {
         } else if(body.error) {
             callback('Unable to find location. Try another forecast', undefined)
         } else {
-            callback(undefined, `${body.daily.summary} It is currently ${body.currently.temperature} degrees out there. There is a ${body.currently.precipProbability}% chance of rain `)
+            callback(undefined, `${body.daily.summary} It is currently ${body.currently.temperature} degrees out there. 
+            The humidity is ${body.currently.humidity}. while the visibility is calculated as ${body.currently.visibility}.
+            There is a ${body.currently.precipProbability}% chance of rain `)
         }
     })
 }
