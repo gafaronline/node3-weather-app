@@ -33,7 +33,9 @@ app.get('', (req, res) => {  //req === request and it contains information about
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
-        message: 'This is the help you need',
+        message: `This app can only provide you with weather forecast for major cities in Nigeria.
+        
+        Thank you for trying it out.`,
         name: 'Gafar Raji'
     })
 })
